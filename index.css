@@ -1,0 +1,783 @@
+* {
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --tim : #321d5e;
+    --tieudephu : #52407b;
+}
+.flex {
+    display : flex;
+}
+a {
+    text-decoration: none;
+}
+.noList {
+    list-style-type : none;
+}
+.hide {
+    display : none !important;
+}
+.show {
+    display : block !important;
+}
+.undersub {
+    scroll-margin-top: 200px;
+}
+.center {
+    align-items: center;
+    justify-content: center;
+}
+#gotoTop {
+    right : 30px;
+    bottom : 50px;
+    position : fixed;
+    width : 50px;
+    height : 50px;
+    text-align: center;
+    background-color: var(--tieudephu);
+    color : white;
+    font-size: 30px;
+    font-weight: 800;
+    z-index : 999;
+    padding : 8px;
+    cursor : pointer;
+}
+.menuDt {
+    display : none;
+}
+body {
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -10;
+}
+.sticky {
+    position: sticky;
+    top : 0;
+    z-index: 999;
+}
+section {
+    width : 100%;
+    padding : 0;
+    z-index :10;
+}
+
+/*<--------------Dau Trang------------------->*/
+.dauTrang {
+    background: white;
+}
+.dauTrang img {
+    margin-top: auto;
+    width : 100%;
+    height : 650px;
+    padding-bottom : 5rem;
+    margin-bottom: 5rem;
+}
+.dauTrang h1 {
+    display : block;
+    padding : 20px;
+    margin : 2rem auto 1rem;
+    width : 70%;
+    font-size : 1.8rem;
+    line-height: 3rem;
+    font-style: bold;
+    text-align : center;
+    opacity : 0;
+    color : var(--tim);
+    text-shadow: 2px 2px rgb(176, 127, 235);
+    animation : Text 3s forwards infinite;
+    z-index : 10;
+}
+@keyframes Text {
+    from { opacity : 0 }
+    to { opacity : 1 }
+}
+/* #flySpace {
+    width : 80%;
+    margin : 0 auto;
+    height : 3rem;
+    position: relative;
+}
+.iconAhihi { 
+    color : var(--tim); 
+    margin : 0 10px;
+}
+.iconAhihi > i {
+    height : 50px;
+    width : 50px;
+    margin : 0;
+    opacity : 0.3;
+    transform: translateY(-50%) rotate(0deg);
+    position: absolute;
+    animation: ahihi 4s linear infinite;
+}
+.iconAhihi:nth-child(2) > i {
+    animation-delay: 0.2s;
+}
+@keyframes ahihi {
+    0% {
+        left: 0;
+        transform: translateY(-50%) rotate(0deg);
+        opacity: 0.3; 
+    }
+    20% {
+        left: 20%;
+        transform: translateY(50%) rotate(5deg);
+        opacity: 1; 
+    }
+    40% {
+        left: 40%;
+        transform: translateY(-50%) rotate(-5deg);
+        opacity: 0.3; 
+    }
+    60% {
+        left: 60%;
+        transform: translateY(50%) rotate(5deg);
+        opacity: 1; 
+    }
+    80% {
+        left: 80%;
+        transform: translateY(-50%) rotate(-5deg);
+        opacity: 0.3;
+    }
+    100% {
+        left: 100%;
+        transform: translateY(50%) rotate(0deg);
+        opacity: 1; 
+    }
+} */
+
+/*<--------------Anh gioi thieu------------------->*/
+.pictureAboutUs {
+    background : linear-gradient(to bottom, #321d5ea1, rgba(0, 0, 0, 0.743));
+    width : 100%;
+    margin : 0 auto;
+}
+.gallery {
+    width: 100%;
+    max-width: 800px;
+    height : auto;
+    margin : 0 auto;
+    padding : 2rem 0;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.listImg {
+    transition : transform 0.6s ease-in-out;
+}
+.listImg .image{
+    width : 800px;
+    height : 500px;
+}
+.listImg img {
+    width : 800px;
+    height : 400px;
+}
+.imgText {
+    font-size : 1rem;
+    font-weight: bold;
+    padding : 15px;
+    color : white;
+}
+.btn {
+    font-size : 2rem;
+    padding : 5px;
+    color: #ffffff66;
+    cursor : pointer;
+    position: absolute;
+    top : 40%;
+}
+.btn > i:hover{
+    transform: scale(1.2);
+    color: #ffffff;
+}
+.prev {
+    left : 1rem;
+} 
+.next {
+    right : 1rem;
+}
+
+/*<-------------Popup------------------->*/
+.popup {
+    display: none; 
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popupContent {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 50%;
+    height : auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.popup p{
+    margin : 0 auto;
+}
+.popup p, .popup a {
+    font-size: 1.2rem;
+}
+.popup img {
+    width : 80%;
+    margin: 1.2rem auto;
+}
+.tbTuyenSinh {
+    width : 100%;
+    margin : 0 auto;
+    padding : 1rem;
+    background : #321d5ea1;
+}
+.tbTuyenSinh img {
+    width : 60%;
+    margin : 1rem 3rem;
+}
+.tbTuyenSinh div {
+    width : 80%;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 1rem;
+}
+.tbTuyenSinh div p {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.imgBox ul  {
+    margin-bottom: 2rem;
+}
+.formDangKi {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding : 5rem;
+    background-color: white;
+    z-index: 10001;
+    opacity: 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.formDangKi.show {
+    opacity: 1;
+}
+.formDangKi.hide {
+    opacity: 0; 
+}
+.formDangKi .form {
+    background-color: #d393e6;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    width: 90%;
+    box-sizing: border-box;
+    border : 1px solid black;
+    margin : 0 auto;
+}
+.formDangKi header h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+.formDangKi .contentDKs {
+    margin-bottom: 20px;
+}
+.formDangKi .contentDK {
+    margin-bottom: 10px;
+    z-index: 10002;
+    display : flex;
+    justify-content: flex-start;
+    color : black;
+}
+.formDangKi .contentDK p {
+    margin: 0;
+    font-size: 1rem;
+    width : 10rem;
+    text-align: left;
+    width: 20%;
+}
+.mucDe {
+    padding: 5px ; 
+    margin: 20px 0px 20px 0px; 
+    color: white; 
+    background-color:firebrick; 
+    font-weight: bold; 
+    font-size: 1.2em;
+}
+.formDangKi .contentDK input, .formDangKi .contentDK select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    margin-left: 2.7rem;    
+}
+.buttonGroup {
+    width : 50%;
+    margin : 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.btnClose, .btnSubmit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btnClose {
+    background-color: #9b1b1b;
+    color: white;
+}
+.btnSubmit {
+    background-color: #1d6920;
+    color: white;
+}
+.btnClose:hover {
+    background-color: #de1919;
+}
+.btnSubmit:hover {
+    background-color: #45a049;
+}
+.diemXetTuyen {
+    flex : 1;
+    justify-content: space-between; 
+    gap: 20px;
+}
+.diemXetTuyen span {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.diemXetTuyen span input {
+    width : 100%;
+    margin : 0 !important;
+}
+.minhChung > div {
+    padding:0px 0px 0px 15px
+}
+.camKet {
+    padding: 5px ; 
+    margin: 20px 0px 20px 0px; 
+    color: white; 
+    background-color:firebrick; 
+    font-weight: bold; 
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/*<--------------Noi dung trang------------------->*/
+.noiDungTrang {
+    width : 100%;
+    margin : 0 auto;
+    padding : 2rem 0;
+    position : relative;
+    background : linear-gradient(to bottom, rgba(0, 0, 0, 0.743), #321d5ea1);
+    color : rgb(207, 203, 210);
+}
+h1.tieude {
+    width : 60%;
+    margin : 0 auto;
+    color : white;
+    font-size: 1.8rem;
+    display : block;
+    padding : 50px 20px 20px;
+    border-bottom: 2px solid rgba(244, 235, 235, 0.401);
+}
+.tab {
+    width : 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top : 2rem;
+    background: (to bottom, black, var(--tim));
+}
+.tab li {
+    width : 20%;
+}
+.tab > li > a {
+    display : block;
+    height : 6rem;
+    padding : 1.5rem;
+    font-size: 1rem;
+    color : var(--tim);
+    border : 1px solid black;
+    border-radius: 1rem;
+    background-color: rgb(180, 190, 237);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+.tab > li > a:hover {
+    background-color: rgb(233, 235, 173);
+}
+.tabContent {
+    margin : 2rem auto;
+    width : 80%;
+}
+.menuXettuyen ul > li{
+    padding : 0;
+    margin : 1rem 0;
+    flex : 1;
+    text-align: center;
+    font-size: 1.01rem;
+    border : 1px solid gray;
+}
+#mgHuongDan .menuXettuyen ul > li, #hocbongtsv .menuXettuyen ul > li, #hocbongkhac .menuXettuyen ul > li {
+    padding : 0;
+    margin : 1rem 0;
+    font-size: 1.01rem;
+    width : 100%;
+    border : none;
+    list-style-type : none;
+    text-align: left;
+}
+#hocbongtsv .menuXettuyen > ul > li, #hocbongkhac .menuXettuyen > ul > li {
+    list-style-type: disc;
+}
+.menuXettuyen ul > li > a {
+    display : block;
+    height : 4rem;
+    padding : 1rem;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    color :rgb(219, 215, 224)
+}
+.menuXettuyen ul > li > a:hover {
+    color : white;
+    font-weight: 700;
+    background-color: rgb(207, 194, 179);
+}
+.tab li:hover .menuXettuyen > li {
+    display: block ;
+} 
+.menuContent .tabContent {
+    display : none;
+    width : 80%;
+}
+.mota {
+    text-indent: 30px;
+    padding : 10px;
+}
+ul.mota > li > ul {
+    font-size: 1rem;
+    list-style: none;
+}
+table {
+    width: 100%;
+    border: 1px solid gray;
+    padding : 10px;
+    border-collapse: collapse;
+    margin : 0 auto;
+}
+table th {
+    text-align: center;
+}
+table th, table td {
+    border: 1px solid gray;
+    padding: 10px;
+}
+.plusList li::before {
+    content: "+"; 
+    margin-right: 10px; 
+    color: white;
+}
+#luuY ul {
+    list-style-type: none;
+}
+#luuY ul li {
+    width : 100%;
+}
+#luuY a {
+    color : white;
+    font-style: italic;
+}
+.plusList li {
+    text-indent: 1.5rem;
+}
+.active {
+    background-color: rgb(233, 235, 173) !important;
+    box-shadow: 10px 10px 10px rgba(19, 29, 122, 0.51), 10px 10px 10px white;;
+}
+.activeSub {
+    color : white !important;
+    font-weight: bold;
+    background-color: rgb(207, 194, 179);
+    box-shadow: -12px -12px -12px rgba(0, 0, 0, 0.15), 10px 10px 10px white;
+}
+#no {
+    display : inline;
+    padding : 0;
+    margin : 0;
+    font-style: italic;
+}
+.menuXettuyen ul > li > a#no:hover {
+    color : unset;
+    font-weight: unset;
+    background-color: unset;
+}
+/* <----------Cam nghi cua sinh vien----------------------> */
+.cuuSv {
+    background : linear-gradient(to bottom, #321d5ea1, rgba(0, 0, 0, 0.743));
+    color : rgb(207, 203, 210);
+}
+.listSpace {
+    width : 80%;
+    padding : 1.5rem;
+    border-top: none;
+    border: 1px solid white;
+    margin : 1rem auto 0;
+    flex-wrap: wrap;
+}
+.item {
+    margin : 0 auto;
+    position: relative;
+    width: 200px; 
+    height: 200px;
+    background-color: white;
+    margin: 5px auto;
+}
+.imgSv {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; 
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.884);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 2; 
+}
+.item:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+.item:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.442); 
+    z-index: 1; 
+}
+
+/* ---------FAQ--------------------- */
+.question {
+    background : linear-gradient(to bottom, rgba(0, 0, 0, 0.743), #321d5ea1);
+}
+.question::after {
+    content : "";
+    display : block;
+    height : 2rem;
+    z-index: 100;
+}
+.faq {
+    width: 60%;
+    margin: 1rem auto 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.faqItem {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.faqQuestion {
+    padding: 1rem;
+    background-color: #e2e2e2;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faqQuestion h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+.faqAnswer {
+    display: none;
+    padding: 1rem;
+    background-color: #fff;
+    color: #555;
+}
+.faqItem.ac .faqAnswer {
+    display: block; 
+}
+
+/* ---------Footer--------------------- */
+footer {
+    width : 100%;
+    background-color: #1f203b;
+    color : lightgrey;
+    padding : 2.5%;
+    box-sizing: border-box;
+    margin : 0;
+    bottom : 0;
+    font-size: 1rem;
+}
+div#logo {
+    float : left;
+    left : 5px;
+    width : 120px;
+    height : auto;
+}
+#logo img {
+    width : 100%;
+}
+#tenAndlogo > h2 {
+    font-size: 0.8rem;
+    width: 450px;
+    padding : 10px;
+    text-align: center;
+}
+footer h2 {
+    padding : 5px;
+    font-size: 1.2rem;
+} 
+footer i {
+    padding : 5px;
+}
+.achievs {
+    justify-content: left;
+}
+.achievs > i {
+    color : white;
+    width : 50px;
+}
+.achievs > h3 {
+    font-size: 1.1rem;
+    text-align: center;
+}
+footer h1 {
+    width : 50%;
+    display : block;
+    color : white;
+    font-size: 1rem;
+    padding : 5px;
+    border-bottom: 2px solid rgba(244, 235, 235, 0.401);
+    margin: 1rem 0;
+}
+footer section div {
+    margin-bottom: 1rem;
+}
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+.socialMedia a {
+    padding : 10px;
+    border-radius: 10px;
+    margin-left : 10px;
+}
+.socialMedia a > i {
+    margin : auto;
+    font-size: 1rem;
+}
+.socialMedia a:nth-of-type(1) {
+    color: blue;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+.socialMedia a:nth-of-type(2) {
+    background: #0084ff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+.socialMedia a:nth-of-type(3) {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+footer img {
+    width : 80%;
+    display : block;
+    margin: 0 auto;
+}
+/* -----------------ANIMATION--------------------- */
+.animation {
+    position : relative;
+    width : 100%;
+    height : 80vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin : 0;
+    overflow: hidden;
+}
+#bg {
+    height : 80vh;
+    z-index: -2;
+}
+.animation img {
+    position: absolute;
+    width : 100%;
+}
+#text {
+    position : relative;
+    color : white;
+    z-index: 1;
+    font-size : 3rem;
+    text-align: center;
+}
+#moon {
+    width : 50%;
+    top : 20%;
+    left : 0;
+}
+#tau {
+    width : 50%;
+    top : 40%;
+}
+#star {
+    width : 50%;
+    top : 0;
+    left : 20%;
+    z-index: -1;
+}

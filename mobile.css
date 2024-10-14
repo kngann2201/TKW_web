@@ -1,0 +1,341 @@
+@media screen and (max-width : 950px) {
+    * {
+        padding : 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size : 14px;
+    }
+    .dauTrang img {
+        height : auto;
+    }
+    .animation {
+        height : 400px;
+    }
+    #bg {
+        height : 400px;
+    }
+    .animation img {
+        position: absolute;
+        width : 100%;
+    }
+    #text {
+        position : relative;
+        color : white;
+        z-index: 1;
+        font-size : 1.5rem;
+        text-align: center;
+    }
+    
+}
+@media screen and (max-width : 767px) {
+    * {
+        font-size : 12px; 
+        max-width: 100%;
+    }
+    :root {
+        --tim : #321d5e;
+        --tieudephu : #52407b;
+    }
+    
+/* <----------THANH MENU-----------------------> */
+    #sidebarMenu {
+        position: fixed;
+        right: -100%; 
+        top: 48px;
+        height: 50%;
+        width: 50%;
+        flex-direction: column;
+        transition: left 0.3s ease;
+        z-index: 9999;
+        font-size: 1rem;
+    }
+    .mucLucs ul.mucLucs {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .mucLucs ul.mucLucs li {
+        width: 100%;
+    }
+    .mucLucs ul.mucLucs li a {
+        display: block;
+        padding: 8px;
+        margin-left: 15px;
+    }
+    .mucLuc li {
+        margin : 10px;
+    }
+    
+    .mucLuc > li > a {
+        border-bottom : 1px solid lightgray;
+        margin : 0;
+        padding : 10px;
+        font-size: 0.8rem;
+        width : 100%;
+    }
+    .logoTruong {
+        display: none; 
+    }
+    #sidebarMenu.show {
+        right: 0;
+    }
+    #closeMenu {
+        display: block;
+        padding: 5px 10px;
+        cursor: pointer;
+        color: white;
+        text-align: right;
+        bottom : 1rem;
+    }
+    .menuDt {
+        display : block; 
+        z-index : 9999;
+        background-color : white;
+        display : flex;
+        margin : 0;
+        width : 100%;
+    }
+    .menuDt img {
+        width : 20rem;
+    }
+    #menuBtn {
+        display : flex;
+        width : 3rem;
+        height : 3rem;
+        padding : 1rem;
+        background-color: var(--tim);
+        align-items: center;
+        z-index : 1000;
+        cursor: pointer;
+        margin : 0.5rem 1rem;
+        color : white;
+        margin-left : auto;
+    }
+    #gotoTop {
+        right : 10px;
+        bottom : 20px;
+        width : 30px;
+        height : 30px;
+        font-size: 20px;
+        font-weight: 500;
+        padding : 5px;
+    }
+
+/* <----------FOOTER----------------------> */
+    .footer {
+        width: 100%;
+        padding: 10px;
+    }
+    .phanDau {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    .logoTruongFooter {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    #truongFooter {
+        width: 70%;
+    }
+    .iconLienHe {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .iconLienHe ul {
+        justify-content: center;
+        padding: 0;
+    }
+    .iconLienHe ul li {
+        font-size: 20px; 
+    }
+    .phanGiua {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+    .noidungFooters {
+        width: 100%; 
+        margin-bottom: 1.5rem;
+    }
+    .noidungFooters:first-child, .noidungFooters:nth-child(2){
+        width: 100%;
+    }
+    .noiDungFooter > div {
+        padding : 0px;
+        margin : 0;
+    }
+    li.noiDungFooter {
+        margin : 0;
+    }
+    .tieuDeNDF {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .thongtinNDF li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .tenNoiDungFooters {
+        justify-content: center;
+    }
+    .noiDungNhoFooter {
+        text-align: center;
+        margin-top: 5px;
+    }
+    .veChungToi {
+        display : flex;
+        gap : 5px;
+    }
+    .veChungToi > li > a {
+        display : block;
+    }
+    .phanCuoi > span {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+/* <----------DAU TRANG----------------------> */
+    #flySpace {
+        display : none;
+    }
+    .dauTrang h1 {
+        display : block;
+        padding : 10px;
+        margin : 0 auto;
+        font-size : 1.5rem;
+    }
+    .dauTrang img {
+        height : auto;
+    }
+    .animation {
+        height : 300px;
+    }
+    #bg {
+        height : 300px;
+    }
+/* <----------ANH GIOI THIEU----------------------> */
+    .gallery {
+        width : 300px;
+        margin : 0 auto;
+    }
+    .listImg {
+        width : 100%;
+    }
+    .listImg .image{
+        flex: 0 0 300px;
+        height : 200px;
+    }
+    .listImg img {
+        width : 300px;
+        height : 150px;
+    }
+    .imgText {
+        font-size : 0.8rem;
+        font-weight: bold;
+        padding : 15px;
+    }
+    .btn {
+        padding : 0px;
+        font-size : 0.5rem;
+    }
+/* <----------NOI DUNG TRANG----------------------> */
+    .popupContent {
+        width: 70%;
+        height : auto;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    .popup p, .popup a {
+        font-size: 1rem;
+    }
+    /* .contentDK {
+        flex-direction: column;
+        gap: 5px;
+        width : 90%;
+    } 
+    .formDangKi .contentDK p {
+        display : block;
+        margin: 0 0 0 2.5rem;
+        width: 100%;
+    }
+    .contentDK input, .contentDK select {
+        width: 100%;
+        display : block;
+        margin: 0; 
+    }
+    .buttonGroup {
+        width : 90%;
+    } */
+    .menuXettuyen ul > li > a {
+        height : 5.5rem;
+        padding :1rem;
+    }
+    .bang {
+        overflow: auto;
+        font-size : 0.8rem;
+    }
+    .item {
+        width: calc(50% - 1rem); 
+    }
+    .tab li > a {
+        font-size: 0.9rem;
+        padding : 10px;
+        text-align: center;
+    }
+    h4.mota {
+        font-size: 0.9rem;
+    }
+    table th, table td, table tr  {
+        font-size: 0.8rem;
+    }
+    .tbTuyenSinh div {
+        width : 80%;
+        height : auto;
+    }
+    .tbTuyenSinh img {
+        width : 40%;
+        margin : 10px 20px;
+    }
+    .imgBox p {
+        margin-bottom: 0.5rem;
+    }
+    .imgBox ul li {
+        font-size: 0.7rem;
+    }
+    .imgBox ul  {
+        margin-bottom: 1rem;
+    }
+    .listSpace {
+        width : 90%;
+        border: none;
+    }
+    .item {
+        width: 150px; 
+        height: 150px;
+        margin: 15px auto;
+    }
+    .imgSv {
+        width: 80%;
+        margin : 0 auto;
+    }
+    .content {
+        transform: translateY(-20%);
+    }
+    .item:hover .content {
+        transform: translateY(0);
+    }
+    .faq {
+        width: 80%;
+    }
+    h1.tieude {
+        font-size: 1.5rem;
+        text-align: center;
+        padding : 10px;
+        margin : 0 auto 0.5rem;
+        width : 90%;
+        line-height: 2rem;
+    }
+}
