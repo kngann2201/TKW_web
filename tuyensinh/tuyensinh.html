@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xét tuyển bổ sung 2024 SAT</title>
+    <link rel="stylesheet" href = "tuyensinh.css" />
+</head>
+<body>
+    <section class="formDangKi">
+        <header>
+            <h1>ĐĂNG KÍ TUYỂN SINH 2024<br>(Xét tuyển Nguyện vọng bổ sung bằng điểm thi THPT)</h1>
+        </header>
+        <div class="form">
+            <div class = "contentDKs">
+                <div id = "thongTinThiSinh">
+                    <p class = "mucDe">THÔNG TIN THÍ SINH</p>
+                    <div class = "contentDK flex center">
+                        <p>Họ tên : </p>
+                        <input type="text" name="hoten" placeholder="Nhập họ tên đầy đủ" required/>
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Giới tính : </p>
+                        <select id="gioitinh" name="gioitinh" required>
+                            <option></option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Ngày tháng năm sinh : </p>
+                        <input type="date" name="namsinh" required/>
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Quốc tịch : </p>
+                        <input type="text" name="quoctich" required/>
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Số căn cước công dân : </p>
+                        <input type="text" name="cccd" required/>
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Địa chỉ liên hệ :</p>
+                        <input type="text" name="diachi" required/>
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Số điện thoại liên hệ : </p>
+                        <input type="text" pattern="(\+84|0)\d{9,10}" name="sdtthisinh" required/>
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Email liên hệ : </p>
+                        <input type="text" name="emailthisinh" required/>   
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Năm tốt nghiệp : </p>
+                        <select class="form-control" id="namtotnghiep" name="namtotnghiep">
+                            <option></option>  
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    <div class = "contentDK center">
+                        <p>Trường THPT Lớp 10 :</p>
+                        <input type="text" name="lop10" required/>
+                    </div>
+                    <div class = "contentDK center">
+                        <p>Trường THPT Lớp 11 :</p>
+                        <input type="text" name="lop11" required/>
+                    </div>
+                    <div class = "contentDK center">
+                        <p>Trường THPT Lớp 12 :</p>
+                        <input type="text" name="lop12" required/>
+                    </div>
+                </div> 
+                <div id = "thongTinDangKi">
+                    <p class = "mucDe">THÔNG TIN ĐĂNG KÍ XÉT TUYỂN</p>
+                    <div class = "contentDK flex center">
+                        <p>Nguyện vọng ngành : </p> 
+                        <select name="nganhdutuyen" id="nganhdutuyen"> 
+                            <option></option> 
+                            <option>Kỹ thuật tàu vũ trụ (Spacecraft Engineering)</option>      
+                            <option>Mô phỏng và tái tạo vũ trụ (Cosmic Simulation and Recreation)</option>
+                            <option>Ứng dụng thực tế ảo (Virtual Reality Applications) </option>
+                            <option>Y học không gian (Space Medicine)</option>
+                        </select> 
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Tổ hợp xét tuyển</p>
+                        <select id="tohopxettuyen1" name="tohopxettuyen1" class="form-control" >
+                            <option></option>
+                            <option>Toán – Vật lí – Hóa học</option> 
+                            <option>Toán – Hóa học – Sinh học</option>
+                            <option>Toán – Khoa học tự nhiên – 1 Ngoại ngữ</option>
+                            <option>Toán - Vật lý – Năng khiếu vẽ </option>
+                            <option>Toán - Năng khiếu vẽ 1 – Năng khiếu vẽ  2</option>
+                         </select> 
+                    </div>
+                    <div class = "contentDK flex center">
+                        <div class = "diemXetTuyen flex">
+                            <span class = "flex">
+                                <span>Điểm môn thi 1 :</span>
+                                <input type="text" name="mon1" required/>
+                            </span>
+                            <span class = "flex">
+                                <span>Điểm môn thi 2 :</span>
+                                <input type="text" name="mon2" required/>
+                            </span>
+                            <span class = "flex">
+                                <span>Điểm môn thi 3 :</span>
+                                <input type="text" name="mon3" required/>
+                            </span>        
+                        </div>
+                    </div>
+                    <div class = "contentDK flex center">
+                        <p>Điểm IELTS/TOEFL (nếu không có ghi 0): </p>
+                        <input type="text" name="bangngoaingu"/>
+                    </div>
+                </div>
+                <div id="minhChung">
+                    <p class = "mucDe">TẢI LÊN CÁC MINH CHỨNG (định dạng file ảnh hoặc .pdf)<br>Vui lòng chụp rõ ràng, các bản bị mờ hoặc thiếu thông tin sẽ bị hủy bỏ kết quả!</p>
+                        <span>1. Tải lên bản chụp Học bạ cấp 3
+                            <input type="file" name="FileUpload1" id="FileUpload1" accept="image/*,application/pdf" />
+                        </span>
+                    <div>
+                        <span>2. Tải lên phiếu điểm thi THPT năm 2024
+                            <input type="file" name="FileUpload2" id="FileUpload2" accept="image/*,application/pdf" />
+                        </span>
+                    </div>
+                    <div>
+                        <span>3. Tải lên bản chụp CCCD/CMND - Mặt trước
+                            <input type="file" name="FileUpload3" id="FileUpload3" accept="image/*,application/pdf" />
+                        </span>
+                    </div>
+                    <div>
+                        <span>4. Tải lên bản chụp CCCD/CMND - Mặt sau
+                            <input type="file" name="FileUpload4" id="FileUpload4" accept="image/*,application/pdf" />
+                        </span>
+                    </div>
+                    <div>
+                        <span>5. Tải lên ảnh chụp bằng IELTS/TOEFL (nếu có)
+                            <input type="file" name="FileUpload5" id="FileUpload5" accept="image/*,application/pdf" />
+                        </span>
+                    </div>
+                </div>
+                <div id="camKet">
+                    <p class = "camKet">Tôi xin cam đoan những nội dung trong đơn đăng ký này là đúng sự thật.
+                        <br>Nếu sai tôi xin chịu xử lý theo Quy chế tuyển sinh hiện hành của Hội đồng tuyển sinh Trường Đại học Vũ trụ và Công nghệ và Bộ Giáo dục & Đào tạo.</p>
+                </div>
+            </div>
+            <div class="buttonGroup">
+                <button class="btnClose"><a href = "https://thao225.github.io/SAT_ThongTinTuyenSinh/">Đóng</a></button>
+                <button type="submit" class="btnSubmit"><a href = "https://thao225.github.io/SAT_ThongTinTuyenSinh/">Hoàn tất</a></button>
+            </div>
+        </div>
+    </section>
+    <script>
+        window.onload = function () {
+            document.querySelector(".btnSubmit").addEventListener('click', function() {
+            alert('Đã hoàn tất đăng kí! Kết quả sẽ được thông báo ngày 20/9, chúc bạn may mắn!');
+            form.classList.add("hide");
+            form.classList.remove("show");
+            document.body.style.overflow = '';
+            });
+    }
+    </script>
+</body>
+</html>
